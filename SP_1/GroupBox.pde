@@ -13,11 +13,12 @@ class GroupBox {
     this.boxHeight=boxHeight;
   }
 
-
   void display() {
     int space = 10;
     for ( int i = 0; i<4; i++) {
       int moveY = y+i*(boxHeight+space);
+      noStroke();
+      fill (255,230);
       rect(x, moveY, boxWidth, boxHeight);
     }
   }
