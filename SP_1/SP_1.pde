@@ -1,11 +1,16 @@
 String [][] groups = {
+  // HOLDNAVNE
   {"RUSSIA", "SAUDI ARABIA", "EGYPT", "URUGUAY"},
   {"PORTUGAL", "SPAIN", "MOROCCO", "IRAN"},
   {"FRANCE", "AUSTRALIA", "PERU", "DENMARK"},
   {"ARGENTINA", "ICELAND", "CROATIA", "NIGERIA"}
 };
+
 Country[][] countries = new Country [groups.length][];
+// HOLD INDLÆSER
+
 String [][] flagPaths = {
+  // HOLD FLAG
   {"SP 1 FLAG\\Russia.png", "SP 1 FLAG\\SaudiArabia.png", "SP 1 FLAG\\Egypt.png", "SP 1 FLAG\\Uruguay.png"},
   {"SP 1 FLAG\\Portugal.png", "SP 1 FLAG\\Spain.png", "SP 1 FLAG\\Morocco.png", "SP 1 FLAG\\Iran.png"},
   {"SP 1 FLAG\\France.png", "SP 1 FLAG\\Australia.png", "SP 1 FLAG\\Peru.png", "SP 1 FLAG\\Denmark.png"},
@@ -15,6 +20,7 @@ String [][] flagPaths = {
 void setup() {
   size(1100, 600);
   background(#140B64);
+  // GRUPPE KASSER
   Group groupA = new Group (50, 50, 475, 50, color(#29B0E3));
   groupA.display();
   addGroupLabel("GROUP A", 225, 40);
@@ -29,17 +35,19 @@ void setup() {
   addGroupLabel("GROUP D", 775, 340);
   makeLine();
 
-  // INDLÆSER HOLDNAVN
+  // INDLÆSER HOLDNAVN + FLAG
   for (int i = 0; i < groups.length; i++) {
     countries[i]= new Country [groups[i].length];
     int x;
     int y;
     if (i<2) {
+      // SORTERING PÅ X-AKSE
       x=170;
     } else {
       x = 720;
     }
     if (i%2==0) {
+      // MODULUS FOR AT SORTERE NED PÅ Y-AKSE
       y=100;
     } else {
       y=400;
@@ -52,6 +60,7 @@ void setup() {
 }
 
 void addGroupLabel(String label, int x, int y) {
+  // METODE FOR AT SKRIVE HOLDNAVNE
   if ( y < 50) {
     fill(#0FA4D8);
   } else {
@@ -64,6 +73,7 @@ void addGroupLabel(String label, int x, int y) {
   text(label, x, y);
 }
 void makeLine() {
+  // LINJE I MIDTEN
   stroke(255);
   strokeWeight(5);
   line(width/2+10, 0, width/2+10, height);
