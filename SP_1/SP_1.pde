@@ -11,10 +11,10 @@ Country[][] countries = new Country [groups.length][];
 
 String [][] flagPaths = {
   // HOLD FLAG
-  {"SP 1 FLAG\\Russia.png", "SP 1 FLAG\\SaudiArabia.png", "SP 1 FLAG\\Egypt.png", "SP 1 FLAG\\Uruguay.png"},
-  {"SP 1 FLAG\\Portugal.png", "SP 1 FLAG\\Spain.png", "SP 1 FLAG\\Morocco.png", "SP 1 FLAG\\Iran.png"},
-  {"SP 1 FLAG\\France.png", "SP 1 FLAG\\Australia.png", "SP 1 FLAG\\Peru.png", "SP 1 FLAG\\Denmark.png"},
-  {"SP 1 FLAG\\Argentina.png", "SP 1 FLAG\\Iceland.png", "SP 1 FLAG\\Croatia.png", "SP 1 FLAG\\Nigeria.png"}
+  {"Russia.png", "SaudiArabia.png", "Egypt.png", "Uruguay.png"},
+  {"Portugal.png", "Spain.png", "Morocco.png", "Iran.png"},
+  {"France.png", "Australia.png", "Peru.png", "Denmark.png"},
+  {"Argentina.png", "Iceland.png", "Croatia.png", "Nigeria.png"}
 };
 
 void setup() {
